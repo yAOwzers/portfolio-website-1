@@ -4,4 +4,4 @@ edit!
 
 Okay i cahnge to hoiya!
 
-okay what the ehk
+yu xuan is LAME!
