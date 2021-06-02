@@ -6,20 +6,20 @@ import './Navbar.css';
 function Navbar() {
     const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
+    const handleClick=() => setClick(!click);
     const closeMobileMenu=() => setClick(false);
 
     return (
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo'>
+                    <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                         YOUR NAME
                     </Link>
                     <div className='menu-icon' onClick={handleClick} >
                         {click ? <FaTimes /> : <FaBars />}
                     </div>
-                    <ul className={click ? 'nav-menu-active' : 'nav-menu'}>
+                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects

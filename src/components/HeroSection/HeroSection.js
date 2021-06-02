@@ -7,7 +7,7 @@ function HeroSection() {
     return (
         <div className='hero-container'>
             <img src={banner} alt='banner' />
-            YOURNAME
+            <h1>YOUR NAME</h1>
         </div>
     );
 }
