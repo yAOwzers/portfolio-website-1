@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import './HeroSection.css';
-import banner from './spongebob.jpg';
+import banner from '../../assets/spongebob.jpg';
 
 function HeroSection() {
     return (
