@@ -21,7 +21,19 @@
         }
 
         .right{
-
+            .wrapper{
+                h3{
+                    font-size: 20px;
+                    justify-content: center;
+                    text-decoration: none;
+                    
+                    
+                    a{
+                        text-decoration: none;
+                        padding-inline: 20px;
+                    }
+                }
+            }
         }
     }
 }
