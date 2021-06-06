@@ -18,7 +18,7 @@ export default function Footer() {
                         Copyright
                     </h3>
                     {isShown1 && (
-                        <FadeIn>
+                        <FadeIn className="name">
                             2021 Your Name
                         </FadeIn>
                     )}
@@ -30,8 +30,8 @@ export default function Footer() {
                         <h3>Connect</h3>
                         {isShown2 && (
                         <FadeIn>
-                            <a href="https://www.linkedin.com/in/thngyuxuan/" rel="noreferrer" target="_blank">LinkedIn</a>
-                            <a href="https://www.instagram.com/yuxuanthng/" rel="noreferrer" target="_blank">Instagram</a>
+                            <a href="https://www.linkedin.com/in/thngyuxuan/" rel="noreferrer" target="_blank" >LinkedIn</a>
+                            <a href="https://www.instagram.com/yuxuanthng/" rel="noreferrer" target="_blank" >Instagram</a>
                         </FadeIn>
                     )}
                     </div>
