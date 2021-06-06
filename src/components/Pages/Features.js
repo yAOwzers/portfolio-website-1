@@ -1,42 +1,55 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../../App.css'
-import './Features.css'
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../App.css';
+import './Features.css';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
+import SwiperCore, { Mousewheel } from 'swiper/core';
+SwiperCore.use(Mousewheel);
 
 function Features() {
     return (
-            <div className='feat-container'>
-                <li className='feat-items'>
-                    <Link to='/projects' className='feat-link'>
-                        Projects
-                    </Link>
-                </li>
-                <li className='feat-items'>
+        <div className='feat-container'>
+            <Swiper
+                className="mySwiper"    
+                direction={'horizontal'} 
+                slidesPerView={'auto'} 
+                spaceBetween={150} 
+                mousewheel={true} 
+                loop={true}
+                speed={800}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <SwiperSlide className='feat-items'>
                     <Link to='/workexp' className='feat-link'>
-                        Work Experiences
+                        WORK EXPERIENCE
                     </Link>
-                </li>
-                <li className='feat-items'>
+                    <img src='https://static.vecteezy.com/system/resources/previews/000/154/516/original/flat-people-multitasking-vectors.jpg' className='image' />
+                </SwiperSlide>
+                <SwiperSlide className='feat-items'>
                     <Link to='/skills' className='feat-link'>
-                        Skills
-                    </Link>
-                </li>
-                <li className='feat-items'>
+                        SKILLS
+                    </Link> 
+                </SwiperSlide>
+                <SwiperSlide className='feat-items'>
                     <Link to='/testimonials' className='feat-link'>
-                        Testimonials
+                        TESTIMONIALS
                     </Link>
-                </li>
-                <li className='feat-items'>
+                </SwiperSlide>
+                <SwiperSlide className='feat-items'>
                     <Link to='/awards' className='feat-link'>
-                        Awards
+                        AWARDS
                     </Link>
-                </li>
-                <li className='feat-items'>
+                </SwiperSlide>
+                <SwiperSlide className='feat-items'>
                     <Link to='/blog' className='feat-link'>
-                        Blog
+                        BLOG
                     </Link>
-                </li>
-            </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
     );
 }
 
