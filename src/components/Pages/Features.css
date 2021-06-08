@@ -1,0 +1,66 @@
+.feat-container {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;   
+}
+
+.feat-wrapper {
+    justify-content: center;
+    align-content: center;
+}
+
+.feat-link {
+  color: rgba(255, 234, 219, 1);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+#root { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+  flex-shrink: 1;
+}
+
+body {
+  font-family: Kanit;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  height: 100%;
+  width: 100%;  
+
+}
+
+.swiper-slide {
+  text-align: left;
+  font-size: 10vh;
+  width: auto !important;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 90vh;
+  height: 90vh;
+  object-fit: cover;
+}

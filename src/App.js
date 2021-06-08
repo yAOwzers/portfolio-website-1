@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import Navbar from "../src/components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
@@ -25,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(module)(App);
