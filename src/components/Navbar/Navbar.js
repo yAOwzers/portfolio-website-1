@@ -40,6 +40,11 @@ function Navbar() {
                                 CONTACT
                             </Link>
                         </li>
+                        <li className='nav-item'>
+                            <Link to='/testimonial' className='nav-links' onClick={closeMobileMenu}>
+                                TESTIMONIALS
+                            </Link>
+                        </li>
                     </ul>
                 </div >  
             </nav>

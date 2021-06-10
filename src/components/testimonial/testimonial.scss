@@ -1,49 +1,83 @@
 .testimonials {
-    padding: 40px 0;
-    background: #f1f1f1;
-    color: #434343;
-    text-align: center;
-    height: calc(100vh - 80px - 100px);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 100px - 80px);
 
-    .inner{
-        max-width: 1200px;
-        margin: auto;
-        overflow: hidden;
-        padding: 0 20px;
 
-        .border{
-            width: 160px;
-            height: 5px;
-            background: #6ab04c;
-            margin: 26px auto;
-        }
+    h1 {
+        font-size: 50px;
+    }
 
-        .row {
+    .container {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card{
+            width: 300px;
+            height: 75%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            transition: all 1s ease;
+            background-color: white;
 
-            .col{
-                flex: 33.33%;
-                max-width: 33.33%;
-                box-sizing: border-box;
-                padding: 15px;
+            &.featured {
+                width: 350px;
+                height: 80%;
+                margin: 0 30px;
+            }
 
-                .testimonial{
-                    background: #fff;
-                    padding: 30px;
+            &:hover{
+                transform: scale(1.1);
+            }
 
-                    .img{
-                        max-width: 40vh;
-                        height: 100px;
-                        border-radius: 50%;
-                    }
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                
 
-                    .name{
-                        font-size: 20px;
-                        text-transform: uppercase;
-                        margin: 20px 0;
-                    }
+                .left, .right {
+                    font-size: 45px;
+                }
+
+                .user{
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 0 30px;
+                }
+            }
+
+            .center {
+                padding: 10px;
+                background-color: rgb(238, 184, 195);
+                border-radius: 10px;
+                font-size: 25px;
+            }
+
+            .bottom {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                h3 {
+                    margin-bottom: 5px;
+                }
+                
+                h4{
+                    color: rgb(121, 115, 115);
                 }
             }
         }
