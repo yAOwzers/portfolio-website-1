@@ -1,44 +1,66 @@
 import "./testimonial.scss";
 import React from 'react';
-//import elon from '../../assets/elon.jpg';
+import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import FadeIn from 'react-fade-in';
 
 export default function Testimonial() {
-    return (
-        <div className="testimonials">
-            <div className="inner">
-                <h1>Testimonials</h1>
-                <div className="border"></div>
 
-                <div className="row">
-                    <div className="col">
-                        <div className="testimonial">
-                            <div className="testimg">test</div>
-                            <div className="name">Elon Musk</div>
-                            <p>
-                                I think this guy is p smart! 10/10 would recommend!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="testimonial">
-                        <div className="testimg">test img</div>
-                            <div className="name">Elon Musk</div>
-                            <p>
-                                I think this guy is p smart! 10/10 would recommend!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="testimonial">
-                        <div className="testimg">test img</div>
-                            <div className="name">Elon Musk</div>
-                            <p>
-                                I think this guy is p smart! 10/10 would recommend!
-                            </p>
-                        </div>
-                    </div>
+    const data = [
+        {
+            id: 1,
+            name: "Tom Durden",
+            title: "Senior Developer",
+            img:
+              "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "../../assets/twitter.png",
+            desc:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+          },
+          {
+            id: 2,
+            name: "Alex Kalinski",
+            title: "Co-Founder of DELKA",
+            img:
+              "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/youtube.png",
+            desc:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+            featured: true,
+          },
+          {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img:
+              "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+          },
+    ]
+    return (
+      <FadeIn delay="200" transitionDuration="500">
+        <div className="testimonials">
+            <h1>Testimonials</h1>
+            <div className="container">
+                {data.map((d) => (
+                    <div className={d.featured ? "card featured" : "card" }>
+                      <div className="top">
+                          <SubdirectoryArrowRightIcon className="left"/>
+                          <img className="user" src={d.img} alt="" />
+                          <YouTubeIcon className="right"/>
+                      </div>
+                      <div className="center">{d.desc}</div>
+                      <div className="bottom">
+                          <h3>{d.name}</h3>
+                          <h4>{d.title}</h4>
+                      </div>
                 </div>
+                ))}
+                    
             </div>
         </div>
+        </FadeIn>
     )
 }
