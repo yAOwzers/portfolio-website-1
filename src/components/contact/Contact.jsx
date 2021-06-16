@@ -4,6 +4,8 @@ import RoomIcon from '@material-ui/icons/Room';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FadeIn from 'react-fade-in';
+import { useRef } from 'react';
+import { TweenMax, Power3 } from 'gsap';
 
 const useStyles = makeStyles((theme) => ({
     pin: {
@@ -23,11 +25,34 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
+
 export default function Contact() {
+    let logoItem = useRef(null);
+
+    console.log(logoItem);
 
     const handleSubmit = (e) => {
         e.preventDefault();
     }
+
+    const handleMouseOver = (e) => {
+        TweenMax.to("#link", .2, {
+          borderWidth: "0px",
+          scale: 3,
+          backgroundColor: "rgba(127, 127, 127, 1)",
+          opacity: .15
+        })
+      }
+
+      const handleMouseOut = (e) => {
+        TweenMax.to("#link", .3, {
+          borderWidth: "2px",
+          scale: 1,
+          backgroundColor: "rgba(127, 127, 127, 0)",
+          opacity: 1
+        })
+      }
 
     const classes = useStyles();
 
@@ -49,7 +74,14 @@ export default function Contact() {
                         <div className={classes.in}>
                             <LinkedInIcon />
                         </div>
-                        <a href="https://www.linkedin.com/in/thngyuxuan/" rel="noreferrer" target="_blank">in/thngyuxuan</a>
+                        <a className="link" 
+                        href="https://www.linkedin.com/in/thngyuxuan/" 
+                        rel="noreferrer" 
+                        target="_blank" 
+                        onMouseOver={handleMouseOver()} 
+                        onMouseOut={handleMouseOut()}>
+                            in/thngyuxuan
+                            </a>
                     </div>
                     <div className="insta">
                         <div className={classes.insta}>
